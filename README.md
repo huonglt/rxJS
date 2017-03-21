@@ -1,6 +1,6 @@
 ## About this app
 
-A nodejs app using reactive style + functional programming. Handle both synchronous + Asynchronous actions. RxJs + nodes + babel + ES6 + axios + Redux
+A nodejs app using reactive style + functional programming. Handle both synchronous + Asynchronous actions. RxJs + nodes + babel + ES6 + axios + Redux, redux-observable
 
 ## Prerequisite
   node & yarn preinstalled
