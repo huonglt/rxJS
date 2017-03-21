@@ -9,7 +9,7 @@ const getRepoNames = (data) => data.map(repo => repo.name);
 
 export const gitHubRepoEpic = (action$) =>
   action$.ofType(USER_REPOS_ACTION.type)
-    .mergeMap((action) => Rx.Observable.from(repoRequest(action))).map(getResponseData).map(data => {
+    .mergeMap((action) => Rx.Observable.fromPromise(repoRequest(action))).map(getResponseData).map(data => {
       const repoNames = data.map(repo => repo.name);
       return userRepoSuccessAction(repoNames);
     });
